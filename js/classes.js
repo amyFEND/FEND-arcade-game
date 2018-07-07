@@ -13,6 +13,17 @@ class Entity {
   render () {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83); //101&83 is hard coding the off-set
   }
+
+  checkCollisions(playerOrEnemy) {
+    if (this.y === playerOrEnemy.y) {
+      if (this.x >= playerOrEnemy.x - 0.5 && this.x <= playerOrEnemy.x + 0.5) { /* can change 0.5 (block) size to increase/decrease sensitivity */
+        return true;
+      }
+    }
+    else {
+      return false;
+    }
+  }
 }
 
 class Player extends Entity {

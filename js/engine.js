@@ -33,7 +33,16 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+    }
+
+    function checkCollisions() {
+      allEnemies.forEach(enemy => {
+        if(enemy.checkCollisions(player) || player.checkCollisions(enemy)) {
+          player.y = 5;
+          player.x = 2;
+        }
+      });
     }
 
     function updateEntities(dt) {
