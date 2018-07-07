@@ -5,6 +5,11 @@ class Entity {
     this.y = 5;
   }
 
+  update (dt) {
+    this.isOutOfBoundsX = this.x > 5;
+    this.isOutofBoundsY = this.y < 1;
+  }
+
   render () {
     ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83); //101&83 is hard coding the off-set
   }
@@ -23,5 +28,15 @@ class Enemy extends Entity {
     this.sprite += 'enemy-bug.png';
     this.x = x;
     this.y = y;
+  }
+
+  update (dt) {
+    super.update();
+    if (this.isOutOfBoundsX) {
+      this.x = -1;
+    }
+    else {
+      this.x += Math.random(dt) / 10;
+    }
   }
 }
