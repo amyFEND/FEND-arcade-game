@@ -30,6 +30,21 @@ class Player extends Entity {
   constructor () {
     super ();
     this.sprite += 'char-princess-girl.png';
+    this.moving = false;
+    this.win = false;
+  }
+
+  update(dt) {
+    super.update();
+    if (this.isOutofBoundsY && !this.moving && !this.win) {
+      alert('Win!');
+      this.win = true;
+    }
+  }
+
+  render() {
+    super.render();
+    this.moving = false;
   }
 
   handleInput(input) {
@@ -49,6 +64,7 @@ class Player extends Entity {
       default:
         break;
     }
+    this.moving = true;
   }
 }
 
