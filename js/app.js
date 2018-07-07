@@ -1,3 +1,6 @@
+const player = new Player();
+
+
 // Enemies our player must avoid
 var Enemy = function() {
 
@@ -13,8 +16,6 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-
-
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
