@@ -71,9 +71,9 @@ var Engine = (function(global) {
     }
 
     function renderEntities() {
-        // allEnemies.forEach(function(enemy) {
-        //     enemy.render();
-        // });
+        allEnemies.forEach(function(enemy) {
+            enemy.render();
+        });
 
         player.render();
     }
