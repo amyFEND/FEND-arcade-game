@@ -37,10 +37,10 @@ var Engine = (function(global) {
     }
 
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
-            enemy.update(dt);
-        });
-        player.update();
+        // allEnemies.forEach(function(enemy) {
+        //     enemy.update(dt);
+        // });
+        // player.update();
     }
 
     function render() {
@@ -87,7 +87,8 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/char-princess-girl.png'
     ]);
     Resources.onReady(init);
 
