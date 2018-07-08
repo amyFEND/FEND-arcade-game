@@ -29,3 +29,62 @@ p {
   height: 35px;
   margin: 0;
 }
+
+/* Modal Style */
+.hidden {
+  display: none;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: inherit;
+}
+
+.modal-box {
+  background-color: rgba(255, 215, 0, 0.8);
+  border-radius: 5px;
+  position: relative;
+  width: 495px;
+  height: 526px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 107px;
+
+}
+
+.popRestart {
+  z-index: 3;
+  left: 445px;
+  font-size: 1.5em;
+  padding-top: 3px;
+}
+
+.popReturn {
+  z-index: 2;
+  left: 15px;
+  font-size: 2em;
+}
+
+.popReturn, .popRestart {
+  position: absolute;
+  background-color: rgba(174, 144, 117, 0);
+  border: solid 1px rgba(174, 144, 117, 0);
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  top: 490px;
+  text-align: center;
+}
