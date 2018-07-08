@@ -32,10 +32,12 @@ body {
   padding: 0;
 }
 
-
-
 .title, .lives {
   display: inline;
+}
+
+.hide {
+  visibility: collapse;
 }
 
 /* Modal Style */
