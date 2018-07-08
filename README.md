@@ -13,14 +13,14 @@
 
 ## Instructions <a id="instructions"></a>
 
-The Galactic Senate is gaining more control and one step closer in becoming an unstoppable empire. Tired of the corruption, you have found an unguarded base where the Galactic Senate keeps collected taxes (supplies and resources).  Get as many supplies as you can across the blockade to the secret Separatist base before anyone discovers your plan. The galaxy is counting on you! Good luck!
+The Galactic Senate is gaining more control and one step closer in becoming an unstoppable empire. Tired of the corruption, you have found an unguarded base where the Galactic Senate keeps collected taxes (supplies and resources).  Get as many supplies as you can across the blockade to the secret Separatist base before anyone discovers your plan. The galaxy is counting on you! May the Force be with you!
 
 For specific, detailed instructions on the original project, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/nanodegrees/nd001/parts/c02fda3b-67bf-48d6-a64f-c6960e2d4d79/modules/269645859775463/lessons/2696458597239847/concepts/59a9fe1d-cab4-4256-8479-4550ce4f4cfd).
 
 ### Starting the Game: <a id="starting-the-game"></a>
 1. Use the arrow keys (or AWSD keys) to move your pilot across the battlefield.
 2. Avoid detection - any collision with a TIE fighter will cause you to return to the beginning.
-3. Continue to get the supplies across the blockade.
+3. Continue to get the supplies across the blockade until the time runs out.
 
 ### Ending the Game:<a id="ending-the-game"></a>
 The game ends when all lives are lost or when the time runs out.
