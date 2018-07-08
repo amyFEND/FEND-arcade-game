@@ -10,9 +10,7 @@ class Entity {
     this.isOutofBoundsY = this.y < 1;
   }
 
-  render () {
-    ctx.drawImage(Resources.get(this.sprite), this.x * 101, this.y * 83); //101&83 is hard coding the off-set
-  }
+
 
   checkCollisions(playerOrEnemy) {
     if (this.y === playerOrEnemy.y) {
@@ -29,7 +27,7 @@ class Entity {
 class Player extends Entity {
   constructor () {
     super ();
-    this.sprite += 'char-princess-girl.png';
+    this.sprite += 'hero.png';
     this.moving = false;
     this.win = false;
   }
@@ -43,8 +41,8 @@ class Player extends Entity {
   }
 
   render() {
-    super.render();
     this.moving = false;
+    ctx.drawImage(Resources.get(this.sprite), this.x * 109, this.y * 100);
   }
 
   handleInput(input) {
@@ -71,9 +69,13 @@ class Player extends Entity {
 class Enemy extends Entity {
   constructor (x, y) {
     super ();
-    this.sprite += 'enemy-bug.png';
-    this.x = x;
+    this.sprite += 'enemy.png';
+    this.x = Math.random(x);
     this.y = y;
+  }
+
+  render () {
+    ctx.drawImage(Resources.get(this.sprite), this.x * 106, this.y * 105);
   }
 
   update (dt) {
