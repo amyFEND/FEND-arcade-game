@@ -11,6 +11,9 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
+    $('.popRestart').click(reset);
+    $('.restart').click(reset);
+
 
     function main() {
 
@@ -88,7 +91,12 @@ var Engine = (function(global) {
     }
 
     function reset() {
-        // noop
+        console.log('engine reset');
+
+        player.x = 2;
+        player.y = 5;
+
+        // return reset;
     }
 
     Resources.load([
