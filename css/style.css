@@ -26,23 +26,25 @@ canvas {
 }
 
 .lives {
-  padding: none;
-  width: 20%;
-  line-height: 18px;
-  margin-bottom: 8px;
+  margin-left: 50px;
 }
 
 .heart {
-  width: 25px;
-  height: 35px;
+  width: 27px;
+  height: 27px;
   margin: 0;
-  padding: 0;
+  padding-top: 5px;
+  vertical-align: middle;
 }
 
-.title, .lives {
-  /* display: inline; */
-  margin-right: auto;
-  margin-left: auto;
+.clock {
+  vertical-align: text-top;
+  font-size: 110%;
+  margin-right: 50px;
+}
+
+.clock, .lives {
+  display: inline;
 }
 
 .hide {
