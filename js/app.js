@@ -6,7 +6,11 @@ let time = 120;
 let clockID;
 let timerOff = true; // sets timer to start in the off position.
 
+let score = 0;
 
+const delHeart1 = document.querySelector('.life1');
+const delHeart2 = document.querySelector('.life2');
+const delHeart3 = document.querySelector('.life3');
 
 
 // allows timer to start when card is clicked.
@@ -73,3 +77,20 @@ function stopDaClock () {
 
    return stopDaClock;
 }
+
+function addScore () {
+  const showScore = document.querySelector('.score');
+  showScore.innerHTML = score;
+
+  const showPopScore = document.querySelector('.popScore')
+  showPopScore.innerHTML = score;
+}
+//
+// function loseLife () {
+//   if (checkCollisions()) {
+//     const delHeart1 = document.querySelector('.life1');
+//   delHeart1.classList.toggle('hide');
+//   const delHeart2 = document.querySelector('.life2');
+//   const delHeart3 = document.querySelector('.life3');
+//
+// }
