@@ -1,16 +1,17 @@
 body {
     text-align: center;
     background: #000 url(https://cssanimation.rocks/demo/starwars/images/bg.jpg);
+    font-family: 'Star Jedi', arial;
 }
 
 canvas {
-  border: 2px solid white;
+  border-left: 0.1px solid white;
+  border-right: 0.1px solid white;
 }
 
 
 /* Title Box/Header */
 .titleBox {
-  border: 5px solid pink;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -20,14 +21,15 @@ canvas {
 
 .title {
   padding: 0;
-  width: 80%;
+  width: 100%;
+  margin-bottom: 5px;
 }
 
 .lives {
-  margin-left: 40%;
   padding: none;
   width: 20%;
   line-height: 18px;
+  margin-bottom: 8px;
 }
 
 .heart {
@@ -38,7 +40,9 @@ canvas {
 }
 
 .title, .lives {
-  display: inline;
+  /* display: inline; */
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .hide {
