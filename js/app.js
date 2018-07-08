@@ -2,12 +2,26 @@ const player = new Player();
 
 const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
 
+let time = 120;
+let clockID;
+let timerOff = true; // sets timer to start in the off position.
 
+
+
+
+// allows timer to start when card is clicked.
+$('player').keyup(startGame, event => {
+  if (timerOff) {
+    startDaClock();
+    timerOff = false;
+  }
+});
 
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
+
     var allowedKeys = {
         37: 'left',     // left arrow
         38: 'up',       // up arrow
@@ -21,3 +35,41 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+
+function startGame () {
+    const keyMove = event.target;
+}
+
+/*
+ * Function that sets up timer.
+ */
+ function startDaClock () {
+   clockId = setInterval(() => {
+       let minutes = Math.floor(time / 60);
+       let seconds = (time % 60);
+       time--;
+
+       if (seconds < 0) {
+         time = 0;
+         return stopDaClock;
+       } if (seconds < 10) {
+         clock.innerHTML = `${minutes}:0${seconds}`;
+         popClock.innerHTML = `${minutes}:0${seconds}`;
+       } else {
+         clock.innerHTML = `${minutes}:${seconds}`;
+         popClock.innerHTML = `${minutes}:${seconds}`;
+       }
+   }, 1000);
+
+  const clock = document.querySelector('.clock');
+
+  const popClock = document.querySelector('.popClock');
+ }
+
+ // stops timer
+function stopDaClock () {
+   clearInterval(clockId);
+
+   return stopDaClock;
+}

@@ -91,6 +91,8 @@ var Engine = (function(global) {
     function reset() {
         console.log('engine reset');
 
+        return stopDaClock;
+
         player.x = 2;
         player.y = 5;
 
