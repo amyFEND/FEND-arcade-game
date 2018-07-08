@@ -2,12 +2,8 @@ body {
     text-align: center;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-  width: 70%;
-}
 
+/* Title Box/Header */
 .titleBox {
   border: 5px solid pink;
   max-width: 500px;
@@ -17,17 +13,29 @@ p {
   margin-top: 25px;
 }
 
+.title {
+  padding: 0;
+  width: 80%;
+}
+
 .lives {
-  width: 30%;
-  margin-left: 70%;
-  border-left: 5px solid blue;
+  margin-left: 40%;
   padding: none;
+  width: 20%;
+  line-height: 18px;
 }
 
 .heart {
   width: 25px;
   height: 35px;
   margin: 0;
+  padding: 0;
+}
+
+
+
+.title, .lives {
+  display: inline;
 }
 
 /* Modal Style */
@@ -59,7 +67,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 107px;
+  margin-top: 125px;
 
 }
 
