@@ -26,7 +26,7 @@ canvas {
 }
 
 .lives {
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 
 .heart {
@@ -41,9 +41,14 @@ canvas {
   vertical-align: text-top;
   font-size: 110%;
   margin-right: 50px;
+  margin-left: 50px;
 }
 
-.clock, .lives {
+.scoreBox {
+  vertical-align: text-top;
+}
+
+.clock, .lives, .scoreBox {
   display: inline;
 }
 
