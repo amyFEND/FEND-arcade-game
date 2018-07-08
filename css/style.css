@@ -49,6 +49,10 @@ canvas {
   visibility: collapse;
 }
 
+.hide {
+  visibility: collapse;
+}
+
 /* Modal Style */
 .hidden {
   display: none;
