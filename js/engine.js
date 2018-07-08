@@ -12,8 +12,6 @@ var Engine = (function(global) {
     doc.body.appendChild(canvas);
 
     $('.popRestart').click(reset);
-    $('.restart').click(reset);
-
 
     function main() {
 
