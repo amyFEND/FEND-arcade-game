@@ -1,3 +1,7 @@
+/**
+ * @class
+ * @classdesc Super class for all movable/interacting objects on the board
+ */
 class Entity {
   constructor () {
     this.sprite = 'images/';
@@ -24,6 +28,11 @@ class Entity {
   }
 }
 
+/**
+ * @class
+ * @classdesc All properties and behavior of game player
+ * @extends Entity
+ */
 class Player extends Entity {
   constructor () {
     super ();
@@ -66,6 +75,12 @@ class Player extends Entity {
   }
 }
 
+
+/**
+ * @class
+ * @classdesc All properties and behavior of game enemies
+ * @extends Entity
+ */
 class Enemy extends Entity {
   constructor (x, y) {
     super ();
