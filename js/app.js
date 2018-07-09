@@ -114,3 +114,25 @@ function countCrash () {
       console.log('doh!');
   }
 }
+
+function winOrLose () {
+  const endMsg = document.querySelector('.endMessage');
+  if (crashes.length < 3 && time > 0){
+    console.log('win!');
+  } else if (crashes.length === 3 || time === 0) {
+    console.log('you lose, Tony Stark');
+    togglePop();
+  }
+}
+
+/*
+ * Function toggles winning pop-up message
+ */
+function togglePop () {
+  const modal = document.querySelector('.modal');
+
+  modal.classList.toggle('hidden');
+
+
+  return togglePop;
+}
