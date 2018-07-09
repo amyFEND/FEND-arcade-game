@@ -90,15 +90,21 @@ function countCrash () {
   const delHeart1 = document.querySelector('.life1');
   const delHeart2 = document.querySelector('.life2');
   const delHeart3 = document.querySelector('.life3');
+  const delPopHeart1 = document.querySelector('.popLife1');
+  const delPopHeart2 = document.querySelector('.popLife2');
+  const delPopHeart3 = document.querySelector('.popLife3');
 
   if (crashes.length === 3){
       delHeart3.classList.toggle('hide');
+      delPopHeart3.classList.toggle('hide');
       console.log('game over, man!');
   } else if (crashes.length === 2) {
       delHeart2.classList.toggle('hide');
+      delPopHeart2.classList.toggle('hide');
       console.log('one heart left!');
   } else if (crashes.length === 1) {
       delHeart1.classList.toggle('hide');
+      delPopHeart1.classList.toggle('hide');
       console.log('doh!');
   }
 }
