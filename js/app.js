@@ -102,16 +102,16 @@ function countCrash () {
   const delPopHeart3 = document.querySelector('.popLife3');
 
   if (crashes.length === 3){
-      delHeart3.classList.toggle('hide');
-      delPopHeart3.classList.toggle('hide');
+      delHeart3.classList.add('hide');
+      delPopHeart3.classList.add('hide');
       console.log('game over, man!');
   } else if (crashes.length === 2) {
-      delHeart2.classList.toggle('hide');
-      delPopHeart2.classList.toggle('hide');
+      delHeart2.classList.add('hide');
+      delPopHeart2.classList.add('hide');
       console.log('one heart left!');
   } else if (crashes.length === 1) {
-      delHeart1.classList.toggle('hide');
-      delPopHeart1.classList.toggle('hide');
+      delHeart1.classList.add('hide');
+      delPopHeart1.classList.add('hide');
       console.log('doh!');
   }
 }
