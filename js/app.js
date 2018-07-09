@@ -84,25 +84,21 @@ function addScore () {
   showPopScore.innerHTML = score;
 }
 
-function loseLife () {
+// counts number of collisions and removes heart with each
+function countCrash () {
+  crashes.push(1);
   const delHeart1 = document.querySelector('.life1');
   const delHeart2 = document.querySelector('.life2');
   const delHeart3 = document.querySelector('.life3');
 
-  if (!delHeart1.classList.contains('hide')) {
-    delHeart1.classList.toggle('hide');
-  }
-
-}
-
-function countCrash () {
-  crashes.push(1);
-
-  if (crashes.length >= 3) {
-    console.log('game over, man!');
+  if (crashes.length === 3){
+      delHeart3.classList.toggle('hide');
+      console.log('game over, man!');
   } else if (crashes.length === 2) {
-    console.log('one heart left!');
+      delHeart2.classList.toggle('hide');
+      console.log('one heart left!');
   } else if (crashes.length === 1) {
-    console.log('doh!');
+      delHeart1.classList.toggle('hide');
+      console.log('doh!');
   }
 }

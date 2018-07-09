@@ -19,6 +19,7 @@ class Entity {
   checkCollisions(playerOrEnemy) {
     if (this.y === playerOrEnemy.y) {
       if (this.x >= playerOrEnemy.x - 0.5 && this.x <= playerOrEnemy.x + 0.5) { /* can change 0.5 (block) size to increase/decrease sensitivity */
+        countCrash();
         return true;
       }
     }
