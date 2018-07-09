@@ -11,6 +11,8 @@ let score = 0;
 let crashes = []; //holds number of collisions
 
 
+
+
 // allows timer to start when card is clicked.
 $('player').keyup(startGame, event => {
   if (timerOff) {
@@ -52,9 +54,10 @@ function startGame () {
        let seconds = (time % 60);
        time--;
 
-       if (seconds < 0) {
-         time = 0;
-         return stopDaClock;
+       if (time < 0) {
+         document.querySelector('.endMessage').innerHTML = 'Time\'s up!';
+         togglePop();
+         stopDaClock();
        } if (seconds < 10) {
          clock.innerHTML = `${minutes}:0${seconds}`;
          popClock.innerHTML = `${minutes}:0${seconds}`;
@@ -103,27 +106,28 @@ function countCrash () {
   if (crashes.length === 3){
       delHeart3.classList.add('hide');
       delPopHeart3.classList.add('hide');
-      console.log('game over, man!');
+      endMsg.innerHTML = 'No more lives!';
+      togglePop();
   } else if (crashes.length === 2) {
       delHeart2.classList.add('hide');
       delPopHeart2.classList.add('hide');
-      console.log('one heart left!');
   } else if (crashes.length === 1) {
       delHeart1.classList.add('hide');
       delPopHeart1.classList.add('hide');
-      console.log('doh!');
   }
 }
 
-function winOrLose () {
-  const endMsg = document.querySelector('.endMessage');
-  if (crashes.length < 3 && time > 0){
-    console.log('win!');
-  } else if (crashes.length === 3 || time === 0) {
-    console.log('you lose, Tony Stark');
-    togglePop();
-  }
-}
+// function winOrLose () {
+//   const endMsg = document.querySelector('.endMessage');
+//
+//   if (crashes.length < 3 && time > 0){
+//     console.log('win!');
+//   } else if (crashes.length < 3 || time === 0) {
+//     console.log('time\'s up');
+//     engMsg.innerHTML = 'Time\'s up!';
+//     togglePop();
+//   }
+// }
 
 /*
  * Function toggles winning pop-up message
@@ -134,5 +138,5 @@ function togglePop () {
   modal.classList.toggle('hidden');
 
 
-  return togglePop;
+  // return togglePop;
 }
