@@ -8,9 +8,7 @@ let timerOff = true; // sets timer to start in the off position.
 
 let score = 0;
 
-const delHeart1 = document.querySelector('.life1');
-const delHeart2 = document.querySelector('.life2');
-const delHeart3 = document.querySelector('.life3');
+let crashes = []; //holds number of collisions
 
 
 // allows timer to start when card is clicked.
@@ -85,12 +83,26 @@ function addScore () {
   const showPopScore = document.querySelector('.popScore')
   showPopScore.innerHTML = score;
 }
-//
-// function loseLife () {
-//   if (checkCollisions()) {
-//     const delHeart1 = document.querySelector('.life1');
-//   delHeart1.classList.toggle('hide');
-//   const delHeart2 = document.querySelector('.life2');
-//   const delHeart3 = document.querySelector('.life3');
-//
-// }
+
+function loseLife () {
+  const delHeart1 = document.querySelector('.life1');
+  const delHeart2 = document.querySelector('.life2');
+  const delHeart3 = document.querySelector('.life3');
+
+  if (!delHeart1.classList.contains('hide')) {
+    delHeart1.classList.toggle('hide');
+  }
+
+}
+
+function countCrash () {
+  crashes.push(1);
+
+  if (crashes.length >= 3) {
+    console.log('game over, man!');
+  } else if (crashes.length === 2) {
+    console.log('one heart left!');
+  } else if (crashes.length === 1) {
+    console.log('doh!');
+  }
+}
