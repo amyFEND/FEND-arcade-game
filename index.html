@@ -15,7 +15,7 @@
 
     <div class="scoreBox"><span class="score">0</span> Supply Runs</div>
 
-    <span class="clock">2:00</span>
+    <span class="clock">1:00</span>
 
     <div class="lives">
       <img src="./images/Heart.png" alt="life 1" class="heart life1">
@@ -28,20 +28,28 @@
 
   <div class="modal hidden">
     <div class="modal-box">
-      <span>You've won!</span>
-      <span class="popTime">Time:
-              <span class="popClock">0:00</span>
-      </span>
-      <div class="popScoreBox"><span class="popScore">0</span> Supply Runs Taken</div>
-      <div class="lives">
-        <img src="./images/Heart.png" alt="life 1" class="heart popLife1">
-        <img src="./images/Heart.png" alt="life 2" class="heart popLife2">
-        <img src="./images/Heart.png" alt="life 3" class="heart popLife3">
+      <div class="popWinMsg">
+        <span>You've won!</span>
       </div>
+        <section class="popStats">
+          <div class="lives popLives">Lives Remaining:
+            <img src="./images/Heart.png" alt="life 1" class="heart popLife1">
+            <img src="./images/Heart.png" alt="life 2" class="heart popLife2">
+            <img src="./images/Heart.png" alt="life 3" class="heart popLife3">
+          </div>
+          <div class="popTimeLeft">
+          <span class="popTime">Time Remaining:
+                <span class="popClock">1:00</span>
+          </span>
+        </div>
+          <div class="popScoreBox"><span>Supply Runs:
+                <span class="popScore">0</span></span>
+          </div>
+        </section>
       <div>
         <i class="popRestart fa fa-redo"></i>
         <i class="popReturn fa fa-times"></i>
-    </div>
+      </div>
     </div>
   </div>
 

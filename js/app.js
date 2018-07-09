@@ -2,7 +2,7 @@ const player = new Player();
 
 const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
 
-let time = 120;
+let time = 60;
 let clockID;
 let timerOff = true; // sets timer to start in the off position.
 
@@ -87,7 +87,6 @@ function addScore () {
 // counts number of collisions and removes heart with each
 function countCrash () {
   if (player.isOutofBoundsY && !this.moving && !this.win) {
-    console.log('something happens?');
     player.x = 2;
     player.y = 5;
   } else {
