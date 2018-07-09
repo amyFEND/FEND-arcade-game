@@ -45,11 +45,12 @@ class Player extends Entity {
   update(dt) {
     super.update();
     if (this.isOutofBoundsY && !this.moving && !this.win) {
-      // this.win = true;
+      this.win = true;
       score++;
       addScore();
-      player.x = 5;
-      player.y = 2;
+      countCrash(false);
+    } else {
+      this.win = false;
     }
   }
 

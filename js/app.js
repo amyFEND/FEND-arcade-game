@@ -86,7 +86,14 @@ function addScore () {
 
 // counts number of collisions and removes heart with each
 function countCrash () {
-  crashes.push(1);
+  if (player.isOutofBoundsY && !this.moving && !this.win) {
+    console.log('something happens?');
+    player.x = 2;
+    player.y = 5;
+  } else {
+    crashes.push(1);
+  }
+
   const delHeart1 = document.querySelector('.life1');
   const delHeart2 = document.querySelector('.life2');
   const delHeart3 = document.querySelector('.life3');
