@@ -11,7 +11,6 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
-    $('.popRestart').click(reset);
 
     function main() {
 
