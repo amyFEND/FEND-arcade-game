@@ -4,6 +4,9 @@ const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
 
 const endMsg = document.querySelector('.endMessage');
 
+const showScore = document.querySelector('.score');
+const showPopScore = document.querySelector('.popScore');
+
 const delHeart1 = document.querySelector('.life1');
 const delHeart2 = document.querySelector('.life2');
 const delHeart3 = document.querySelector('.life3');
@@ -89,10 +92,8 @@ function stopDaClock () {
 }
 
 function addScore () {
-  const showScore = document.querySelector('.score');
   showScore.innerHTML = score;
 
-  const showPopScore = document.querySelector('.popScore')
   showPopScore.innerHTML = score;
 
   const supplyRunText = document.querySelector('.supplyRun');
@@ -149,6 +150,12 @@ function togglePop () {
  */
  function resetGame () {
    time = 60;
+   score = 0;
+   showScore.innerHTML = score;
+   showPopScore.innerHTML = score;
+
+   crashes.length = 0;
+
    togglePop();
    startDaClock();
 
