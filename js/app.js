@@ -94,6 +94,17 @@ function addScore () {
 
   const showPopScore = document.querySelector('.popScore')
   showPopScore.innerHTML = score;
+
+  const supplyRunText = document.querySelector('.supplyRun');
+  const popSupplyText = document.querySelector('.popSupplyRun');
+
+  if (score === 1) {
+    supplyRunText.innerHTML = ' Supply Run';
+    popSupplyText.innerHTML = 'Supply Run';
+  } else {
+    supplyRunText.innerHTML = ' Supply Runs';
+    popSupplyText.innerHTML = 'Supply Runs';
+  }
 }
 
 // counts number of collisions and removes heart with each
