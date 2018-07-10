@@ -10,7 +10,7 @@ let score = 0;
 
 let crashes = []; //holds number of collisions
 
-
+$('.popReturn').click(togglePop); // "closes" modal
 
 
 // allows timer to start when card is clicked.
