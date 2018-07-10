@@ -4,6 +4,13 @@ const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
 
 const endMsg = document.querySelector('.endMessage');
 
+const delHeart1 = document.querySelector('.life1');
+const delHeart2 = document.querySelector('.life2');
+const delHeart3 = document.querySelector('.life3');
+const delPopHeart1 = document.querySelector('.popLife1');
+const delPopHeart2 = document.querySelector('.popLife2');
+const delPopHeart3 = document.querySelector('.popLife3');
+
 let time = 60;
 let clockID;
 let timerOff = true; // sets timer to start in the off position.
@@ -13,6 +20,7 @@ let score = 0;
 let crashes = []; //holds number of collisions
 
 $('.popReturn').click(togglePop); // "closes" modal
+$('.popRestart').click(resetGame); // "closes" and resets game
 
 
 
@@ -59,7 +67,6 @@ function startGame () {
        if (time < 0) {
          endMsg.innerHTML = 'Time\'s up!';
          togglePop();
-         stopDaClock();
        } if (seconds < 10) {
          clock.innerHTML = `${minutes}:0${seconds}`;
          popClock.innerHTML = `${minutes}:0${seconds}`;
@@ -98,19 +105,12 @@ function countCrash () {
     crashes.push(1);
   }
 
-  const delHeart1 = document.querySelector('.life1');
-  const delHeart2 = document.querySelector('.life2');
-  const delHeart3 = document.querySelector('.life3');
-  const delPopHeart1 = document.querySelector('.popLife1');
-  const delPopHeart2 = document.querySelector('.popLife2');
-  const delPopHeart3 = document.querySelector('.popLife3');
 
   if (crashes.length === 3){
       delHeart3.classList.add('hide');
       delPopHeart3.classList.add('hide');
       endMsg.innerHTML = 'No more lives!';
       document.querySelector('.popLives').innerHTML = 'Lives Remaining: none';
-      stopDaClock();
       togglePop();
   } else if (crashes.length === 2) {
       delHeart2.classList.add('hide');
@@ -129,4 +129,22 @@ function togglePop () {
 
   modal.classList.toggle('hidden');
 
+  stopDaClock();
+
 }
+
+/**
+ * Function resets the game
+ */
+ function resetGame () {
+   time = 60;
+   togglePop();
+   startDaClock();
+
+   delHeart3.classList.remove('hide');
+   delPopHeart3.classList.remove('hide');
+   delHeart2.classList.remove('hide');
+   delPopHeart2.classList.remove('hide');
+   delHeart1.classList.remove('hide');
+   delPopHeart1.classList.remove('hide');
+ }
