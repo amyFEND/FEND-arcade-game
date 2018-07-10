@@ -106,7 +106,8 @@ function countCrash () {
   if (crashes.length === 3){
       delHeart3.classList.add('hide');
       delPopHeart3.classList.add('hide');
-      endMsg.innerHTML = 'No more lives!';
+      document.querySelector('.endMessage').innerHTML = 'No more lives!';
+      document.querySelector('.popLives').innerHTML = 'Lives Remaining: none'
       togglePop();
   } else if (crashes.length === 2) {
       delHeart2.classList.add('hide');
