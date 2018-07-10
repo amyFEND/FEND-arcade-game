@@ -129,6 +129,4 @@ function togglePop () {
 
   modal.classList.toggle('hidden');
 
-
-  // return togglePop;
 }
