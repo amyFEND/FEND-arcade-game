@@ -107,7 +107,8 @@ function countCrash () {
       delHeart3.classList.add('hide');
       delPopHeart3.classList.add('hide');
       document.querySelector('.endMessage').innerHTML = 'No more lives!';
-      document.querySelector('.popLives').innerHTML = 'Lives Remaining: none'
+      document.querySelector('.popLives').innerHTML = 'Lives Remaining: none';
+      stopDaClock();
       togglePop();
   } else if (crashes.length === 2) {
       delHeart2.classList.add('hide');
@@ -117,18 +118,6 @@ function countCrash () {
       delPopHeart1.classList.add('hide');
   }
 }
-
-// function winOrLose () {
-//   const endMsg = document.querySelector('.endMessage');
-//
-//   if (crashes.length < 3 && time > 0){
-//     console.log('win!');
-//   } else if (crashes.length < 3 || time === 0) {
-//     console.log('time\'s up');
-//     engMsg.innerHTML = 'Time\'s up!';
-//     togglePop();
-//   }
-// }
 
 /*
  * Function toggles winning pop-up message
