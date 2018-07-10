@@ -1,7 +1,16 @@
+/**
+ *
+ * GLOBALS
+ *
+ */
+
 const player = new Player();
 
 const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
 
+/**
+ * DOM selectors
+ */
 const endMsg = document.querySelector('.endMessage');
 
 const showScore = document.querySelector('.score');
@@ -27,6 +36,11 @@ $('.popRestart').click(resetGame); // "closes" and resets game
 
 
 
+/**
+ *
+ * FUNCTIONS
+ *
+ */
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
@@ -145,7 +159,7 @@ function togglePop () {
 
 }
 
-/**
+/*
  * Function resets the game
  */
  function resetGame () {
