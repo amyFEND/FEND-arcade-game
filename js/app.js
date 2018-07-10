@@ -2,6 +2,8 @@ const player = new Player();
 
 const allEnemies = [...Array(3)].map((_,i)=> new Enemy(0,i+1));
 
+const endMsg = document.querySelector('.endMessage');
+
 let time = 60;
 let clockID;
 let timerOff = true; // sets timer to start in the off position.
@@ -55,7 +57,7 @@ function startGame () {
        time--;
 
        if (time < 0) {
-         document.querySelector('.endMessage').innerHTML = 'Time\'s up!';
+         endMsg.innerHTML = 'Time\'s up!';
          togglePop();
          stopDaClock();
        } if (seconds < 10) {
@@ -106,7 +108,7 @@ function countCrash () {
   if (crashes.length === 3){
       delHeart3.classList.add('hide');
       delPopHeart3.classList.add('hide');
-      document.querySelector('.endMessage').innerHTML = 'No more lives!';
+      endMsg.innerHTML = 'No more lives!';
       document.querySelector('.popLives').innerHTML = 'Lives Remaining: none';
       stopDaClock();
       togglePop();
