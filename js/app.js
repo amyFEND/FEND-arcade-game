@@ -13,13 +13,6 @@ let crashes = []; //holds number of collisions
 $('.popReturn').click(togglePop); // "closes" modal
 
 
-// allows timer to start when card is clicked.
-$('player').keyup(startGame, event => {
-  if (timerOff) {
-    startDaClock();
-    timerOff = false;
-  }
-});
 
 
 // This listens for key presses and sends the keys to your
@@ -38,6 +31,13 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+
+    if (allowedKeys[e.keyCode]) {
+      if (timerOff) {
+        startDaClock();
+        timerOff = false;
+      }
+    }
 });
 
 
