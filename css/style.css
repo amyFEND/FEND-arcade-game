@@ -9,6 +9,27 @@ canvas {
   border-right: 0.1px solid white;
 }
 
+/* *** Fonts *** */
+@font-face {
+  font-family: starjedi;
+  src: url("../fonts/Starjedi.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: starjhol;
+  src: url("../fonts/Starjhol.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: starjout;
+  src: url("../fonts/Starjout.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: stjedise;
+  src: url("../fonts/STJEDISE.TTF") format("opentype");
+}
+
 
 /* Title Box/Header */
 .titleBox {
@@ -17,12 +38,16 @@ canvas {
   margin-right: auto;
   margin-top: 25px;
   color: rgba(255, 215, 0, 1);
+  font-family: starjedi;
 }
 
 .title {
   padding: 0;
-  width: 100%;
+  width: 120%;
   margin-bottom: 5px;
+  margin-left: -10%;
+  font-family: starjhol;
+  font-size: 2.5em;
 }
 
 .heart {
@@ -67,6 +92,7 @@ canvas {
   left: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-family: starjout;
   font-size: inherit;
 }
 
@@ -88,6 +114,7 @@ canvas {
 .popStats {
   display: table;
   font-size: 175%;
+  font-family: starjedi;
   margin-top: -100px;
 }
 
